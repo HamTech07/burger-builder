@@ -143,7 +143,6 @@ main{
     
 }
 
-
 #bun1{
     width: 27%;
     border-top-left-radius: 130px;
@@ -231,6 +230,10 @@ main{
     height: 15px; 
     box-shadow: 5px 5px #5b2a0b;
 }
+@keyframes pop {
+    from { transform: scale(0.8); opacity: 0; }
+    to { transform: scale(1); opacity: 1; }
+}
 #salad {
   width: 30%;
   height: 6px; 
@@ -257,12 +260,15 @@ main{
 #meat {
   width: 30%;
   height: 25px; 
-  border-radius: 20px;
+  border-radius:20px;
   background-color: rgb(100, 30, 6);
   border: 3px solid rgb(100, 30, 6); 
   margin-top: 6px;
 }
 @media only screen and (max-width: 320px) {
+  .container,#mc,#modal-content,#loginpage{
+        width: 55px;
+    }
   header {
     height: 35px;
   }
@@ -295,7 +301,11 @@ main{
 }
 
 @media only screen and (max-width: 480px) {
+    .container,#mc,#modal-content,#loginpage{
+        width: 65px;
+    }
   header {
+
     height: 40px;
   }
   footer {
