@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Burger Builder</title>
+    <link rel="stylesheet" href="style.css"/>
+    <link rel="icon" type="image/png" href="./assets\img\burger1.png">
+</head>
+<body>
+
+<header id="burgerHeader">
+    <nav>
+        <img src="./assets\img\Screenshot 2025-12-08 184127.png" class="logo">
+        
+        <div class="links">
+        <a href="#home" id="burgerLink" class="active">Burger Builder</a>
+        <a href="#signin" id="signinLink">SIGN IN</a>
+        <a href="#orders" id="ordersLink" style="display: none;">Orders</a> 
+        <a href="#logout" id="logoutLink" style="display: none;">LOG OUT</a>                                
+</div>
+    </nav>
+</header>
+
+<h1 align="center" id="taste" style="font-weight: bolder; display: none; margin-top: 90px; bottom: 0; color: #060505;">HOPE IT TASTE GREAT!</h1>
+
+<main id="burgerBuilder">
+     <center>
+    <div id="bun1">
+        <center>
+        <div id="seeds">
+            <div id="s1"></div>
+            <div id="s2"></div>
+            <div id="s3"></div>
+            <div id="s4"></div>
+            <div id="s5"></div>
+        </div>
+        </center>
+    </div>
+    <div style="margin-top: 20px; margin-bottom: 15px; font-weight: bolder; align-content: center; justify-content: center;" id="select"> PLEASE SELECT INGREDIENTS.</div>
+    
+    <div id="here!"></div>
+    
+    <div id="bun2"></div>
+    </center>
+</main>
+
+<footer id="burgerFooter" style="display: flex;">
+    <div id="price">CURRENT PRICE: 50RS</div>
+
+    <div class="item">
+        <span class="label">SALAD:</span>
+        <button class="less" onclick="hides()">LESS</button>
+        <button class="more" onclick="shows()">MORE</button>
+    </div>
+
+    <div class="item">
+        <span class="label">BACON:</span>
+        <button class="less"  onclick="hideb()">LESS</button>
+        <button class="more" onclick="showb()">MORE</button>
+    </div>
+
+    <div class="item">
+        <span class="label">CHEESE:</span>
+        <button class="less"  onclick="hidec()">LESS</button>
+        <button class="more" onclick="showc()">MORE</button>
+    </div>
+
+    <div class="item">
+        <span class="label">MEAT:</span>
+        <button class="less"  onclick="hidem()">LESS</button>
+        <button class="more" onclick="showm()">MORE</button>
+    </div>
+
+ <button id="orderBtn" style="display: block;">SIGN IN TO ORDER</button>
+ <button id="giveorder" style="display: none;">ORDER NOW</button>
+    
+</footer>
+
+<div id="loginpage" style="display: none;">
+<center>
+<div class="container">
+    <h2 id="titleText">Sign In</h2>
+    <div id="topError" style="display: none;"></div> 
+
+    <input type="email" id="email" placeholder="E-mail">
+    <input type="password" id="password" placeholder="Password">
+
+    <button id="mainBtn" class="loginb">Sign In</button>
+
+    <div class="switch" id="toggleBtn">Switch to Sign Up</div>
+</div>
+</center>
+</div>
+
+<div id="ordertaker" align="center" style="display: none;">
+    <div class="container" style=" position: relative; top: 30px;">
+        <h2 align="center">Your Order Summary</h2>
+        <div id="orderContent" align="left">
+            <p ><strong>Ingredients:</strong> <span id="summaryIngredients"></span></p>
+            <p><strong>Total Price:</strong> <span id="summaryPrice"></span></p>
+        </div>
+        <button id="backToBuilder" class="loginabc" >Back</button>
+    </div>
+</div>
+
+<div id="orderSummaryModal" class="modal"> 
+    <div class="modal-content">
+        <h2>Order Summary</h2>
+        <p id="summaryMessage">A delicious burger with the following ingredients:</p>
+        
+        <p class="total-price-display">
+            <strong>INGREDIENTS: <span id="summaryg"></span></strong>
+            <strong>RS <span id="summarycrice"></span></strong>
+        </p>
+        <p>Continue to checkout?</p>
+
+        <div class="modal-actions">
+            <button id="cancelOrderBtn" class="modal-btn">CANCEL</button>
+            <button id="continueOrderBtn" class="modal-btn">CONTINUE</button>
+        </div>
+    </div>
+</div>
+
+<center>
+<div class="last" style="display: none; margin-top: 20px;" align="center">
+    <button id="cancelBtn" class="modal-btn">CANCEL</button>
+    <button id="continueBtn" class="modal-btn">CONTINUE</button>
+</div>
+</center>
+
+<center>
+<div id="sm" style="display: none;"> 
+    <div class="mc">
+        <h2>Enter your contact data:</h2>
+        <form id="cf">
+            <input type="text" id="nameInput" placeholder="Your Name" required>
+            <input type="text" id="streetInput" placeholder="Street" required>
+            <input type="text" id="postalCodeInput" placeholder="Postal Code" required>
+            <input type="text" id="countryInput" placeholder="Country" required>
+            <input type="email" id="emailInput" placeholder="E-Mail" required>
+            
+            <select id="deliveryMethod">
+                <option value="fastest">Fastest</option>
+                <option value="cheapest">Cheapest</option>
+            </select>
+            
+            <button type="submit" id="finish" style="border-color: transparent; background-color: aliceblue; color: rgb(118, 118, 250); font-size: large;">Complete Order</button>
+        </form>
+    </div>
+</div>
+</center>
+
+<script src="script.js"></script>
+</body>
+</html>
