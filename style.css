@@ -266,11 +266,95 @@ main{
   margin-top: 6px;
 }
 @media only screen and (max-width: 320px) {
-  .container,#mc,#modal-content,#loginpage{
+  #mc,#modal-content{
         width: 55px;
     }
+   #loginpage{
+    align-items: flex-start;   
+    padding-top: 40px;
+    position: relative;
+  }
+
+  .container{
+    width: 95%;
+    padding: 15px;
+    position: relative;
+  }
+
+  h2{
+    font-size: 18px;
+  }
+   input{
+    padding: 7px;
+    font-size: 13px;
+    size: 30%;
+    position: relative;
+  }
+
+  #topError{
+    font-size: 11px;
+    margin-bottom: 6px;
+  }
+
+  .loginb{
+    padding: 6px;
+    font-size: 13px;
+  }
   header {
     height: 35px;
+  }
+   #bun1{
+    width: 75%;
+    height: 12px;
+    border-top-left-radius: 70px;
+    border-top-right-radius: 70px;
+    box-shadow: 3px 3px #5b2a0b;
+  }
+
+
+  #bun2{
+    width: 75%;
+    height: 9px;
+    border-bottom-left-radius: 35px;
+    border-bottom-right-radius: 35px;
+    box-shadow: 3px 3px #5b2a0b;
+  }
+
+  #meat{
+    width: 75%;
+    height: 15px;
+  }
+
+
+  #salad{
+    width: 80%;
+    height: 3px;
+  }
+
+
+  #bacon{
+    width: 75%;
+    height: 5px;
+  }
+
+  #cheese{
+    width: 80%;
+    height: 3px;
+  }
+
+  #s1,#s2,#s3{
+    width: 14px;
+    height: 6px;
+    box-shadow: 1px 1px 1px #aaa;
+  }
+
+  #s1{ top:8px; left:12px; }
+  #s2{ top:10px; left:40px; }
+  #s3{ top:4px;  left:65px; }
+
+  #select{
+    width: 30px;
+    height: 20px;
   }
   footer {
     padding: 10px 0;
@@ -298,16 +382,95 @@ main{
     margin-top: 35px;
     height: 55vh;
   }
+  #select{
+    width: 30%;
+  }
 }
 
 @media only screen and (max-width: 480px) {
-    .container,#mc,#modal-content,#loginpage{
+    #mc,#modal-content{
         width: 65px;
     }
+    #loginpage{
+    align-items: flex-start;   
+    padding-top: 40px;
+    position: relative;
+  }
+
+    .container{
+    width: 90%;
+    padding: 20px;
+    position: relative;
+  }
+
+  h2{
+    font-size: 20px;
+  }
+    input{
+    padding: 8px;
+    
+    font-size: 14px;
+    position: relative;
+  }
+
+  #topError{
+    font-size: 13px;
+    margin-bottom: 8px;
+  }
+  
+  .loginb{
+    padding: 8px;
+    font-size: 15px;
+  }
   header {
 
     height: 40px;
   }
+  #bun1{
+    width: 60%;
+    height: 14px;
+    border-top-left-radius: 90px;
+    border-top-right-radius: 90px;
+  }
+
+  #bun2{
+    width: 60%;
+    height: 10px;
+    border-bottom-left-radius: 40px;
+    border-bottom-right-radius: 40px;
+  }
+
+  #meat{
+    width: 60%;
+    height: 18px;
+  }
+
+  #salad{
+    width: 65%;
+    height: 4px;
+  }
+
+  #bacon{
+    width: 60%;
+    height: 6px;
+  }
+
+  #cheese{
+    width: 65%;
+    height: 3px;
+  }
+
+  #s1,#s2,#s3,#s4{
+    width: 18px;
+    height: 8px;
+  }
+
+
+  #s1{ top:10px; left:15px; }
+  #s2{ top:14px; left:55px; }
+  #s3{ top:4px;  left:85px; }
+  #s4{ top:14px; left:120px; }
+
   footer {
     padding: 12px 0;
   }
@@ -334,6 +497,9 @@ main{
     margin-top: 40px;
     height: 60vh;
   }
+   #select{
+    width: 45%;
+  }
 }
 
 @media only screen and (max-width: 768px) {
@@ -343,6 +509,41 @@ main{
   footer {
     padding: 20px 0;
   }
+   #bun1{
+    width: 45%;
+    height: 17px;
+  }
+
+  #bun2{
+    width: 45%;
+    height: 12px;
+  }
+
+  #meat{
+    width: 45%;
+    height: 22px;
+  }
+
+  #salad{
+    width: 50%;
+    height: 5px;
+  }
+
+  #bacon{
+    width: 45%;
+    height: 8px;
+  }
+
+  #cheese{
+    width: 50%;
+    height: 4px;
+  }
+
+  #s1,#s2,#s3{
+    width: 22px;
+    height: 10px;
+  }
+
   .logo {
     height: 30px;
   }
@@ -370,9 +571,13 @@ main{
 #loginpage {
     font-family: Arial, sans-serif;
     background-color: #fff;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
+
+    display: flex;                
+    justify-content: center;       
+    align-items: center;          
+
+    min-height: 100vh;
+    padding: 15px;
 }
 
 .container {
@@ -380,6 +585,8 @@ main{
     padding: 30px;
     box-shadow: 0 0 10px rgba(0,0,0,0.1);
     text-align: center;
+    background: #fff;
+    border-radius: 8px;
 }
 
 input {
@@ -390,6 +597,7 @@ input {
     border: 2px solid #ccc;
     border-radius: 5px;
     transition: 0.3s;
+    box-sizing: border-box;  
 }
 
 input.invalid {
